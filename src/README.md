@@ -1,9 +1,9 @@
-# NeteaseMusicAPI
+# API NeteaseMusic
 基于 [Meting](https://github.com/metowolf/Meting) 修改的网易云音乐API
 
-Dome: https://api.littlehands.site/NeteaseMusic/
+Dome: `GET https://api.littlehands.site/NeteaseMusic/`
 
-[GitHub 地址](https://github.com/moeshin/NeteaseMusicAPI) | [GitHub 下载](https://codeload.github.com/moeshin/NeteaseMusicAPI/zip/master)
+[GitHub 地址](https://github.com/moeshin/API-NeteaseMusic) | [GitHub 下载](https://codeload.github.com/moeshin/API-NeteaseMusic/zip/master)
 
 ## 参数说明
 参数|说明
