@@ -1,7 +1,7 @@
 <?php
 /**
  * API
- * 
+ *
  * @package API 
  * @author 小さな手は
  * @version 1.0.0
@@ -35,7 +35,8 @@ class API {
 	 * 
 	 */
 	function __construct() {
-		header("Content-type: text/json; charset=utf-8");
+		header('Content-type: text/json; charset=utf-8');
+		header('Access-Control-Allow-Origin: *');
 		$this->method = strtoupper($_SERVER['REQUEST_METHOD']);
 		$this->type == 'POST'
 			and $this->args = $_POST
