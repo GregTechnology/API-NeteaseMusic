@@ -4,7 +4,7 @@
  *
  * @package API 
  * @author 小さな手は
- * @version 1.0.0
+ * @version 1.0.1
  * @link https://www.littlehands.site/
  */
 class API {
