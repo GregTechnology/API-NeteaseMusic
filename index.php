@@ -7,18 +7,17 @@
  * @link https://www.littlehands.site/
  * @link https://github.com/moeshin/API-NeteaseMusic/
  */
-require '../api.php';
+require './src/api.php';
 $api = new API();
 $id = $api->get('id') and $type = $api->get('type')
 	or $api->over([
-		'message' => '参数错误'
+		'ok' => false,
+		'data' => '参数错误'
 	]);
 
-require 'Meting.php';
+require './src/Meting.php';
 $m = new Meting('netease');
 $m->format(true);
-
-$r = '';
 
 switch ($type) {
 	case 'list':
@@ -30,7 +29,17 @@ switch ($type) {
 	case 'lyric':
 		$r = $m->lyric($id);
 		break;
+
+	default:
+		$api->out(json_encode(array(
+			'ok' => false,
+			'data' => 'invalid type'
+		)));
+		exit;
+		break;
 }
 
-$api->out($r);
-?>
+$api->out(json_encode(array(
+	'ok' => true,
+	'data' => json_decode($r)
+),JSON_UNESCAPED_SLASHES));
