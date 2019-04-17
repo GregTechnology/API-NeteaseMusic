@@ -29,6 +29,10 @@ switch ($type) {
 	case 'lyric':
 		$r = $m->lyric($id);
 		break;
+		
+	case 'search':
+		$r = $m->search($id);
+		break;
 
 	default:
 		$api->out(json_encode(array(
